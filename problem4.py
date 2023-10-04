@@ -33,3 +33,19 @@ that is an obtuse triangle
 
 
 """
+
+def triangleType(a, b, c):
+    sa = pow(a, 2)
+    sb = pow(b, 2)
+    sc = pow(c, 2)
+    if (sa == sc + sb or sb == sa + sc or sc == sa + sb):
+        print("That is a right triangle.")
+    elif (sa > sc + sb or sb > sa + sc or sc > sa + sb):
+        print("That is a obtuse triangle.")
+    else:
+        print("That is a acute triangle.")
+
+a = float(input("Enter a number: "))
+b = float(input("Enter a second number: "))
+c = float(input("Enter a third number: "))
+triangleType(a, b, c)
